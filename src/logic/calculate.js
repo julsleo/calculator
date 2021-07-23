@@ -25,6 +25,7 @@ export default function calculate(obj, buttonName) {
     if (buttonName === "0" && obj.next === "0") {
       return {};
     }
+
     // If there is an operation, update next
     if (obj.operation) {
       if (obj.next) {
@@ -97,6 +98,16 @@ export default function calculate(obj, buttonName) {
     }
     if (obj.total) {
       return { total: (-1 * parseFloat(obj.total)).toString() };
+    }
+    return {};
+  }
+
+  if(buttonName === "Sqrt"){
+    if(obj.next){
+      return { next: (Math.sqrt(obj.next)).toString()};
+    }
+    if(obj.total) {
+      return { total: (Math.sqrt(obj.total)).toString()};
     }
     return {};
   }
