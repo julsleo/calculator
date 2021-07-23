@@ -144,6 +144,12 @@ describe("calculate", function() {
     total: "0.08",
   });
 
+  test(["4", "Sqrt"], {
+    next: "2",
+  });
+
+
+
   test(["4", "%", "x", "2"], {
     total: "0.04",
     operation: "x",

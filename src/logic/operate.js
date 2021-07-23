@@ -20,5 +20,6 @@ export default function operate(numberOne, numberTwo, operation) {
       return one.div(two).toString();
     }
   }
+
   throw Error(`Unknown operation '${operation}'`);
 }
